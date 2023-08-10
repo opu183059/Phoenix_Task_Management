@@ -61,7 +61,7 @@ const Contact = () => {
 
             <div className="col-span-full">
               <label htmlFor="message" className="sr-only">
-                Message
+                Your Feedback
               </label>
 
               <textarea
