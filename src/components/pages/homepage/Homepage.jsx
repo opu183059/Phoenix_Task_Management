@@ -1,4 +1,5 @@
 import BannerSection from "./BannerSection";
+import FreeSignUp from "./FreeSignUp";
 import Testimonial from "./Testimonial";
 
 const Homepage = () => {
