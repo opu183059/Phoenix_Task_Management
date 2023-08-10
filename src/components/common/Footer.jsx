@@ -23,6 +23,7 @@ const Footer = () => {
           <a className="link link-hover">Need anything? Get in touch and <br /> we can help you.</a>
         </div>
       </footer>
+      
       <footer className="footer items-center p-4 bg-white text-gray-800 w-full ">
         <div className='flex flex-col lg:flex-row gap-3 justify-between w-full'>
           <div className="items-center flex  gap-3">
