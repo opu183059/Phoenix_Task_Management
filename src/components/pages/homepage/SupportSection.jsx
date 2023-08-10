@@ -22,7 +22,7 @@ const SupportSection = () => {
         <p className="text-orange-700 uppercase">
           #1 Support in the software
         </p>
-        <h1 className="text-6xl font-semibold mt-7 mb-9">
+        <h1 className="text-6xl text-gray-800 font-semibold mt-7 mb-9">
           24/7 Real Time <br /> Support.
         </h1>
         <p className="text-gray-700 mb-6">
