@@ -33,7 +33,6 @@ const Contact = () => {
               <label htmlFor="name" className="sr-only">
                 Name
               </label>
-
               <input
                 ref={nameRef}
                 type="text"
