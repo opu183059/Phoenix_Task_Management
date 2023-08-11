@@ -1,0 +1,40 @@
+/* ... other styles ... */
+
+/* Donut Chart Styling */
+.rotate-0 {
+    transform: rotate(0deg);
+  }
+  .rotate-30 {
+    transform: rotate(30deg);
+  }
+  .rotate-60 {
+    transform: rotate(60deg);
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+  }
+  .rotate-120 {
+    transform: rotate(120deg);
+  }
+  .rotate-150 {
+    transform: rotate(150deg);
+  }
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  .rotate-210 {
+    transform: rotate(210deg);
+  }
+  .rotate-240 {
+    transform: rotate(240deg);
+  }
+  .rotate-270 {
+    transform: rotate(270deg);
+  }
+  .rotate-300 {
+    transform: rotate(300deg);
+  }
+  .rotate-330 {
+    transform: rotate(330deg);
+  }
+  
