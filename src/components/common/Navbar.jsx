@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/phoenix_logo_without_bg.png";
 import logotext from "../../assets/phoenix_name.png";
+import { useContext } from "react";
+import { Authcontext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logout } = useContext(Authcontext);
+  // console.log(user);
+  const handleLogout = () => {
+    logout()
+      .then(() => {})
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -28,7 +39,7 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>About Us</a>
+              <Link to={"/"}>Home</Link>
             </li>
             <li>
               <a>Features</a>
@@ -38,6 +49,9 @@ const Navbar = () => {
             </li>
             <li>
               <a>Contact Us</a>
+            </li>
+            <li>
+              <Link to={"/registration"}>Registration</Link>
             </li>
           </ul>
         </div>
@@ -51,7 +65,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg font-medium">
           <li>
-            <a>About Us</a>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
             <a>Features</a>
@@ -62,12 +76,32 @@ const Navbar = () => {
           <li>
             <a>Contact Us</a>
           </li>
+          <li>
+            <Link to={"/registration"}>Registration</Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="px-4 py-1 uppercase rounded-2xl bg-orange-400 text-white hover:bg-orange-600">
-          Login
-        </a>
+        {user ? (
+          <>
+            <h1 className="mr-1 font-semibold text-base border-2 px-3 py-1 rounded-md">
+              {user?.displayName}
+            </h1>
+            <button
+              onClick={handleLogout}
+              className="px-4 py-1 uppercase rounded-2xl bg-orange-400 text-white hover:bg-orange-600"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <Link
+            to={"/login"}
+            className="px-4 py-1 uppercase rounded-2xl bg-orange-400 text-white hover:bg-orange-600"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
