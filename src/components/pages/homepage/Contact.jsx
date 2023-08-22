@@ -10,7 +10,7 @@ const Contact = () => {
     console.log("clicked");
   };
   return (
-    <div className="relative mx-auto w-full max-w-7xl bg-white text-gray-700">
+    <div className="relative mx-auto w-full max-w-7xl bg-white text-gray-700 min-h-screen">
       <div className="grid grid-cols-2">
         <div className="order-1 col-span-full">
           <iframe
@@ -33,7 +33,6 @@ const Contact = () => {
               <label htmlFor="name" className="sr-only">
                 Name
               </label>
-
               <input
                 ref={nameRef}
                 type="text"
@@ -61,7 +60,7 @@ const Contact = () => {
 
             <div className="col-span-full">
               <label htmlFor="message" className="sr-only">
-                Message
+                Your Feedback
               </label>
 
               <textarea
@@ -77,10 +76,10 @@ const Contact = () => {
 
             <div>
               <button
+                className="btn bg-orange-600 hover:bg-orange-700 rounded-md border-none text-white"
                 type="submit"
-                className="mt-4 bg-gradient-to-r from-orange-400 to-orange-950 hover:from-orange-600 hover:to-black text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 ease-in-out"
               >
-                Send Message
+                Send message
               </button>
             </div>
           </form>
