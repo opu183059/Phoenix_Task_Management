@@ -5,15 +5,20 @@ import { BiMenu } from "react-icons/bi";
 import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { useState } from "react";
 import BoardMenu from "./BoardMenu";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CreateBoard from "./CreateBoard";
+import ActiveBoard from "./ActiveBoard";
+import AddEditTask from "./AddEditTask";
 
 
 const WorkSpaceLayout = () => {
+    const dispatch=useDispatch()
     const [isDropDown, setIsDropDown] = useState(false)
     const [openBoardMenu, setOpenBoardMenu] = useState(false)
+    const [openAddEditTask,setOpenAddEditTask]=useState(false)
     const [openCreateBoard, setOpenCreateBoard] = useState(false)
     const boards = useSelector((state) => state.boards)
+    const board=boards.find(board=>board.isActive)
     const [boardType,setBoardType]=useState('add')
     return (
         <div>
@@ -31,6 +36,20 @@ const WorkSpaceLayout = () => {
                             openCreateBoard={openCreateBoard} ></CreateBoard>
                         }
                     </div>
+                    <div>
+                        {board&&<ActiveBoard
+                        board={board}
+                        ></ActiveBoard>}
+                    </div>
+                    <div>
+                        {
+                            openAddEditTask&&<AddEditTask
+                            setOpenCreateBoard={setOpenCreateBoard} 
+                            setOpenAddEditTask={setOpenAddEditTask}
+                            type={'add'}
+                            ></AddEditTask>
+                        }
+                    </div>
 
                 </div>
 
@@ -46,11 +65,17 @@ const WorkSpaceLayout = () => {
                         </Link>
                         <li onClick={() => setIsDropDown(!isDropDown)}><a >all board{isDropDown ? <><AiOutlineUp></AiOutlineUp></> : <><AiOutlineDown></AiOutlineDown></>}</a></li>
                         <li><Link to={'/'}>Home</Link></li>
-                        <li><a>+ create new task</a></li>
+                        <li onClick={()=>{
+                            setOpenAddEditTask(!openAddEditTask),
+                            setOpenCreateBoard(false)
+                            
+                            }}><a>+ create new task</a></li>
                         <li><a>Sidebar Item 2</a></li>
                         <div className="divider"></div>
 
                         {isDropDown && <BoardMenu
+                        setBoardType={setBoardType}
+                        setOpenAddEditTask={setOpenAddEditTask}
                             setOpenCreateBoard={setOpenCreateBoard}
                             openCreateBoard={openCreateBoard}
                             setOpenBoardMenu={setOpenBoardMenu}></BoardMenu>}
