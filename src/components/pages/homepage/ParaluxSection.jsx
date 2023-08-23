@@ -2,7 +2,7 @@ import parallaxImg from "../../../assets/Images/paralax.jpeg";
 
 const ParaluxSection = () => {
   return (
-    <div className="relative md:h-[44rem]">
+    <div className="relative md:h-[44rem] py-10 md:py-0 text-center ">
       <div
         className="absolute inset-0 z-[-1] bg-fixed bg-cover "
         style={{
@@ -11,7 +11,7 @@ const ParaluxSection = () => {
       ></div>
 
       <div className="flex flex-col items-center justify-center md:h-[40rem] backdrop-blur-[2px]">
-        <h1 className="text-4xl font-bold text-white italic">
+        <h1 className="text-xl md:text-4xl font-bold text-white italic">
           A task manager you can trust for life
         </h1>
         <p className="text-lg text-white mt-4 px-10 md:px-20">

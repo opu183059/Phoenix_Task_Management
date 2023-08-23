@@ -15,7 +15,7 @@ const Navbar = () => {
       });
   };
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 fixed z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,23 +42,30 @@ const Navbar = () => {
               <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <a>Features</a>
+              <a href="#feature">Features</a>
             </li>
             <li>
-              <a>Pricing</a>
+              <a href="#price">Pricing</a>
             </li>
             <li>
-              <a>Contact Us</a>
+              <a href="#contactus">Contact Us</a>
             </li>
-            <li>
-              <Link to={"/registration"}>Registration</Link>
-            </li>
+            {!user && (
+              <li>
+                <Link to={"/registration"}>Registration</Link>
+              </li>
+            )}
+            {user && (
+              <li>
+                <a>Add Task</a>
+              </li>
+            )}
           </ul>
         </div>
         <Link to={"/"}>
           <div className="flex items-center gap-1">
-            <img src={logo} className="w-[40px] h-[45px]" />
-            <img src={logotext} alt="" />
+            <img src={logo} className="w-8 h-8" />
+            <img src={logotext} alt="" className="w-16" />
           </div>
         </Link>
       </div>
@@ -68,17 +75,24 @@ const Navbar = () => {
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <a>Features</a>
+            <a href="#feature">Features</a>
           </li>
           <li>
-            <a>Pricing</a>
+            <a href="#price">Pricing</a>
           </li>
           <li>
-            <a>Contact Us</a>
+            <a href="#contactus">Contact Us</a>
           </li>
-          <li>
-            <Link to={"/registration"}>Registration</Link>
-          </li>
+          {!user && (
+            <li>
+              <Link to={"/registration"}>Registration</Link>
+            </li>
+          )}
+          {user && (
+            <li>
+              <a>Add Task</a>
+            </li>
+          )}
         </ul>
       </div>
       <div className="navbar-end">
