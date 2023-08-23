@@ -39,7 +39,6 @@ const Registration = () => {
               .catch((error) => {
                 console.log(error);
               });
-
             logout()
               .then(() => {})
               .catch((error) => {

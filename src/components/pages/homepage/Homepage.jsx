@@ -11,7 +11,7 @@ import TrackSection from "./TrackSection";
 
 const Homepage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen md:pt-20">
       <BannerSection></BannerSection>
       <ParaluxSection></ParaluxSection>
       <SupportSection></SupportSection>
