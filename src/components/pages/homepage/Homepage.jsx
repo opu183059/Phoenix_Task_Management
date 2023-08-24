@@ -14,7 +14,6 @@ const Homepage = () => {
   return (
     <div className="min-h-screen md:pt-20">
       <BannerSection></BannerSection>
-<<<<<<< HEAD
       <ParaluxSection></ParaluxSection>
       <SupportSection></SupportSection>
       <ExtraSection></ExtraSection>
@@ -24,10 +23,6 @@ const Homepage = () => {
       {/* <SpecialSection></SpecialSection> */}
       <Contact></Contact>
       <FreeSignUp></FreeSignUp>
-=======
-
-  
->>>>>>> 47ab5e889f38b03f29c6d42b15cc5f440c475d69
     </div>
   );
 };
