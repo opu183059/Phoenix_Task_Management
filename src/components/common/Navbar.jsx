@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { Authcontext } from "../Provider/AuthProvider";
 
 const Navbar = () => {
+
   const { user, logout } = useContext(Authcontext);
   // console.log(user);
   const handleLogout = () => {
@@ -14,6 +15,15 @@ const Navbar = () => {
         console.log(error);
       });
   };
+  const navItems=<div className="md:flex">
+ <li><Link to={"/"}>Home</Link></li>
+ <li><Link to={"/"}>Pricing</Link></li>
+ <li><Link to={"/"}>futures</Link></li>
+ <li><Link to={"/"}>Contact Us</Link></li>
+ <li><Link to={'workspaces'}>WorkSpaces</Link></li>
+ <li><Link to={"/registration"}>  Registration</Link></li>
+ 
+  </div>
   return (
     <div className="navbar bg-base-100 fixed z-50">
       <div className="navbar-start">
@@ -38,28 +48,9 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <Link to={"/"}>Home</Link>
-            </li>
-            <li>
-              <a href="#feature">Features</a>
-            </li>
-            <li>
-              <a href="#price">Pricing</a>
-            </li>
-            <li>
-              <a href="#contactus">Contact Us</a>
-            </li>
-            {!user && (
-              <li>
-                <Link to={"/registration"}>Registration</Link>
-              </li>
-            )}
-            {user && (
-              <li>
-                <a>Add Task</a>
-              </li>
-            )}
+            {
+              navItems
+            }
           </ul>
         </div>
         <Link to={"/"}>
@@ -71,28 +62,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-lg font-medium">
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <a href="#feature">Features</a>
-          </li>
-          <li>
-            <a href="#price">Pricing</a>
-          </li>
-          <li>
-            <a href="#contactus">Contact Us</a>
-          </li>
-          {!user && (
-            <li>
-              <Link to={"/registration"}>Registration</Link>
-            </li>
-          )}
-          {user && (
-            <li>
-              <a>Add Task</a>
-            </li>
-          )}
+          {
+            navItems
+            
+          }
+      
         </ul>
       </div>
       <div className="navbar-end">
