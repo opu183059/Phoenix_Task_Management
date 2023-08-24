@@ -10,7 +10,10 @@ const Contact = () => {
     console.log("clicked");
   };
   return (
-    <div className="relative mx-auto w-full max-w-7xl bg-white text-gray-700 min-h-screen">
+    <div
+      id="contactus"
+      className="relative md:mt-0 mt-8 mx-auto w-full max-w-7xl bg-white text-gray-700 min-h-screen"
+    >
       <div className="grid grid-cols-2">
         <div className="order-1 col-span-full">
           <iframe

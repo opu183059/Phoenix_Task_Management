@@ -8,7 +8,7 @@ const Task = ({ colIndex, taskIndex }) => {
     const columns = board.columns;
     const col = columns?.find((col, i) => i === colIndex);
     const task = col?.tasks.find((task, i) => i === taskIndex);
-    const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
+    // const [isTaskModalOpen, setIsTaskModalOpen] = useState(false);
 
     let completed = 0;
     let subtasks = task?.subtasks;

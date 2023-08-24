@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import { FaShareAlt } from "react-icons/fa";
 
 const TablePercentage = () => {
@@ -64,17 +65,16 @@ const TablePercentage = () => {
                 />
                 {user.name}
               </td>
-              <td className="p-2">
+              <td className="p-2 hidden md:block">
                 <progress
                   className="progress progress-accent w-56"
                   value="40"
                   max="100"
                   value={user.percentage}
                   color="bg-primary"
-                >
-                  {user.percentage}%
-                </progress>
+                ></progress>
               </td>
+              <td className="text-right"> {user.percentage}%</td>
               {!isMobile && <td className="px-12 py-5">{user.count}</td>}
             </tr>
           ))}

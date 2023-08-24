@@ -7,7 +7,7 @@ const ExtraSection = () => {
     setShowText(!showText);
   };
   return (
-    <div className="bg-slate-100">
+    <div id="feature" className="bg-slate-100">
       <div className="max-w-5xl mx-auto flex flex-col-reverse lg:flex-row">
         <div className="lg:w-1/2 h-72 overflow-x-auto p-4 my-auto">
           <h3 className="text-3xl fond-bold uppercase mb-4 text-slate-600">

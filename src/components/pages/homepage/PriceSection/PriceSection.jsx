@@ -1,13 +1,13 @@
 const PriceSection = () => {
   return (
-    <div className="bg-slate-50 lg:p-4 min-h-screen">
+    <div id="price" className="bg-slate-50 p-4 min-h-screen">
       <h2 className="uppercase text-center text-2xl font-bold text-slate-600">
         pricing
       </h2>
       <p className="text-center text-slate-500">
-        choose your comfortable price for our price range
+        Choose your comfortable price for our price range
       </p>
-      <div className="lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-3 mt-4">
+      <div className="lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5 mt-4">
         <div className="hover:scale-110 transition duration-200 mt-4 card mx-2 lg:mx-auto h-96 full lg:w-80 rounded-lg bg-gradient-to-bl to-emerald-500 from-yellow-400  text-primary-content">
           <div className="card-body p-4 w-full ">
             <div className="text-opacity-50 relative">
