@@ -4,6 +4,7 @@ import ExtraSection from "./ExtraSection/ExtraSection";
 import FreeSignUp from "./FreeSignUp";
 import ParaluxSection from "./ParaluxSection";
 import PriceSection from "./PriceSection/PriceSection";
+
 // import SpecialSection from "./SpecialSection/SpecialSection";
 import Steps from "./Steps";
 import SupportSection from "./SupportSection";
@@ -19,6 +20,7 @@ const Homepage = () => {
       <ExtraSection></ExtraSection>
       <TrackSection></TrackSection>
       <Steps></Steps>
+      
       <PriceSection></PriceSection>
       {/* <SpecialSection></SpecialSection> */}
       <Contact></Contact>
